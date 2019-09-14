@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from tkinter import  font
 import requests
@@ -25,7 +26,7 @@ def formatResponse(weather):
 
 def getWeather(city):
     # print(city)
-    api_key = 'daeceb7485df4fc88db2a44f341a9c37'
+    api_key = os.environ.get('OPENWEATHER_API_KEY')
     url = 'https://api.openweathermap.org/data/2.5/weather'
     params = {'APPID': api_key, 'q': city, 'units': 'metric'}
     response = requests.get(url, params=params)
