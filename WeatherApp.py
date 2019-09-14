@@ -8,7 +8,6 @@ root = tk.Tk()
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
-# myapi daeceb7485df4fc88db2a44f341a9c37
 # url api.openweathermap.org/data/2.5/weather?q={city name}
 bg_image = tk.PhotoImage(file='landscape.png')
 bg_label = tk.Label(root, image=bg_image)
